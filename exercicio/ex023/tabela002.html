@@ -16,9 +16,26 @@
             border: 1px solid black;
             padding: 10px;
         }
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
         thead, tfoot {
-            background-color: grey;
+            background-color: rgb(43, 43, 43);
             color: white;
+        }
+
+        thead > tr >th {
+            position: sticky;
+            top: -1px;
+            background-color: rgb(43, 43, 43);
+        }
+
+        tbody > tr:nth-child(2n) {
+            /* 2n-1 = odd [] 2n = even*/
+            background-color: lightgray;
         }
         td.num {
             text-align: right;
@@ -38,10 +55,11 @@
                 TD, TR, TH
     -->
 <table>
+    <caption>População das Unidades Federativas.</caption>
     <thead>
         <tr>
-            <th>Estado</th>
-            <th>População</th>
+            <th scope="col">Estado</th>
+            <th scope="col" style="width: 50px;">População</th>
         </tr>
     </thead>
     <tbody>
@@ -156,7 +174,7 @@
     </tbody>
     <tfoot>
         <tr>
-            <th>Total de Habitantes</th>
+            <th scope="row">Total de Habitantes</th>
             <td class="num"><strong>210 147 125</strong></td>
         </tr>
     </tfoot>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         /*Declarações Gerais*/
-                * {
+        * {
             margin: 0px;
             padding: 0px;
             font-family: Arial, Helvetica, sans-serif;
@@ -26,9 +26,22 @@
         }
 
         /* declarações retrato*/
+        @media screen and (orientation: portrait){
+            body {
+                background-image: url(../imagens/cev-portrait.jpg);
+                background-position: center bottom;
+            }
+            
+        }
 
         /*Declarações Paisagem*/
 
+        @media screen and (orientation: landscape){
+            body {
+                background-image: url(../imagens/cev-landscape.jpg);
+                background-position: left bottom;
+            }  
+        }
 
     </style>
     <title>Media Query</title>
